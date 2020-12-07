@@ -39,5 +39,11 @@ public class Program {
 		sellerDAO.update(sellerUpdate);
 		System.out.println(sellerUpdate.toString());
 		
+		
+		System.out.println("Seller #6 ------- Seller Delete");
+		Seller sellerDelete= sellerDAO.findById(7);
+		sellerDAO.deleteByID(sellerDelete.getID());
+		System.out.println("Delete Done!");
+		
 	}
 }
