@@ -33,5 +33,11 @@ public class Program {
 		sellerDAO.insert(sellerInsert);
 		System.out.println(sellerInsert.toString());
 		
+		System.out.println("Seller #5 ------- Seller Update");
+		Seller sellerUpdate= sellerDAO.findById(3);
+		sellerUpdate.setName("Rick");
+		sellerDAO.update(sellerUpdate);
+		System.out.println(sellerUpdate.toString());
+		
 	}
 }
