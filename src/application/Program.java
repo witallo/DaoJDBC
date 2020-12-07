@@ -1,6 +1,9 @@
 package application;
 
+import java.util.List;
+
 import model.dao.SellerDAO;
+import model.entities.Department;
 import model.entities.Seller;
 
 public class Program {
@@ -11,6 +14,13 @@ public class Program {
 		System.out.println("Seller #1 ------- FindByID");
 		Seller seller = sellerDAO.findById(1);
 		System.out.println(seller);
+		
+		System.out.println("Seller #2 ------- FindByDepartment");
+		Department department = new Department(2,null);
+		List<Seller> list = sellerDAO.findByDepartment(department);
+		for(Seller obj : list){
+			System.out.println(obj.toString());
+		}
 	}
 
 }
